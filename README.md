@@ -4,6 +4,8 @@
 
 [![browser support][11]][12]
 
+[![NPM][13]][14]
+
 A observable value representation
 
 ## Example
@@ -56,3 +58,5 @@ observ := (A) => Observable<A>
   [10]: https://david-dm.org/Raynos/observ
   [11]: https://ci.testling.com/Raynos/observ.png
   [12]: https://ci.testling.com/Raynos/observ
+  [13]: http://nodei.co/npm/observ.png
+  [14]: http://nodei.co/npm/observ
