@@ -1,15 +1,17 @@
 {
   "name": "observ",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A observable value representation",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/Raynos/observ.git",
   "main": "index",
   "homepage": "https://github.com/Raynos/observ",
-  "contributors": [{
-    "name": "Raynos"
-  }],
+  "contributors": [
+    {
+      "name": "Raynos"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/Raynos/observ/issues",
     "email": "raynos2@gmail.com"
@@ -18,10 +20,12 @@
   "devDependencies": {
     "tape": "~1.0.2"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://github.com/Raynos/observ/raw/master/LICENSE"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/observ/raw/master/LICENSE"
+    }
+  ],
   "scripts": {
     "test": "node ./test/index.js",
     "start": "node ./index.js",
