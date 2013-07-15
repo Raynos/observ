@@ -5,10 +5,6 @@ function Observable(value) {
     value = value === undefined ? null : value
 
     observable.set = function (v) {
-        if (value === v) {
-            return
-        }
-
         value = v
         listeners.forEach(function (f) {
             return f(v)
