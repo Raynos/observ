@@ -7,7 +7,7 @@ function Observable(value) {
     observable.set = function (v) {
         value = v
         listeners.forEach(function (f) {
-            return f(v)
+            f(v)
         })
     }
 
