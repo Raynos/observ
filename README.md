@@ -23,6 +23,24 @@ var curr = v()
 assert.equal(curr, "new value")
 ```
 
+## Example computed
+
+```js
+var Observable = require("observ")
+var computed = require("observ/computed")
+
+var one = Observable(1)
+var two = Observable(2)
+
+var together = computed([one, two], function (a, b) {
+  return a + b
+})
+
+assert.equal(together(), 3)
+two.set(5)
+assert.equal(together(), 7)
+```
+
 ## Docs
 
 ```ocaml
