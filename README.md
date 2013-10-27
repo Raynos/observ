@@ -23,6 +23,26 @@ var curr = v()
 assert.equal(curr, "new value")
 ```
 
+## What about `dominictarr/observable` ?
+
+Both `observ` & `observable` have the same interface of 
+ 
+ - `thing()` gets the value
+ - `thing.set(...)` sets the value
+ - `thing(function (value) { ... })` listens to the value.
+
+The way `observ` and `observable` differ is in listening.
+
+ - `observ` will ONLY call the listener if `.set()` is invoked.
+ - `observable` calls the listener IMMEDIATELY and calls it whenever
+  `.set()` is invoked
+
+Both `observ` & `observable` have a computed method with the same
+  interface.
+
+ - `require("observable").compute`
+ - `require("observ/computed")`
+
 ## Docs
 
 ```ocaml
