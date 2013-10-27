@@ -38,6 +38,11 @@ The way `observ` and `observable` differ is in listening.
  - `observable` calls the listener IMMEDIATELY and calls it whenever
   `.set()` is invoked
 
+`observ` can be used in a similar fashion to `observable` by using
+  `var watch = require("observ/watch")`. You can then just 
+  `watch(thing, function (value) { ... })` and it will call the
+  listener immediately
+
 Both `observ` & `observable` have a computed method with the same
   interface.
 
