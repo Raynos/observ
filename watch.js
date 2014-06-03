@@ -1,6 +1,7 @@
 module.exports = watch
 
 function watch(observable, listener) {
-    observable(listener)
+    var remove = observable(listener)
     listener(observable())
+    return remove
 }
