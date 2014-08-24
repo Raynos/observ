@@ -6,9 +6,10 @@ function Observable(value) {
 
     observable.set = function (v) {
         value = v
-        listeners.forEach(function (f) {
-            f(v)
-        })
+
+        for (var i = 0, len = listeners.length; i < len; i++) {
+            listeners[i](v)
+        }
     }
 
     return observable
@@ -21,7 +22,12 @@ function Observable(value) {
         listeners.push(listener)
 
         return function remove() {
-            listeners.splice(listeners.indexOf(listener), 1)
+            for (var i = 0, len = listeners.length; i < len; i++) {
+                if (listeners[i] === listener) {
+                    listeners.splice(i, 1)
+                    break
+                }
+            }
         }
     }
 }
