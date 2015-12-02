@@ -14,20 +14,21 @@ A observable value representation
 var Observable = require("observ")
 
 var v = Observable("initial value")
-v(function onchange(newValue) {
+var stopListening = v(function onchange(newValue) {
   assert.equal(newValue, "new value")
 })
 v.set("new value")
 
 var curr = v()
 assert.equal(curr, "new value")
+stopListening()
 ```
 
 
 ## What about `dominictarr/observable` ?
 
-Both `observ` & `observable` have the same interface of 
- 
+Both `observ` & `observable` have the same interface of
+
  - `thing()` gets the value
  - `thing.set(...)` sets the value
  - `thing(function (value) { ... })` listens to the value.
@@ -39,7 +40,7 @@ The way `observ` and `observable` differ is in listening.
   `.set()` is invoked
 
 `observ` can be used in a similar fashion to `observable` by using
-  `var watch = require("observ/watch")`. You can then just 
+  `var watch = require("observ/watch")`. You can then just
   `watch(thing, function (value) { ... })` and it will call the
   listener immediately
 
@@ -71,11 +72,11 @@ assert.equal(together(), 7)
 
 ```ocaml
 type Observable<A> :
-  (() => A) & 
+  (() => A) &
   ((Function<A>) => void) & {
     set: (A) => void
   }
-  
+
 
 observ : (A) => Observable<A>
 
