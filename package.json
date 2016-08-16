@@ -20,12 +20,7 @@
   "devDependencies": {
     "tape": "~1.0.2"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/Raynos/observ/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "scripts": {
     "test": "node ./test/index.js",
     "start": "node ./index.js",
